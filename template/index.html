@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nand Kishore Here</title>
+</head>
+<body bgcolor="blue">
+
+<form action="expression" method="POST">
+    {% csrf_token %}
+    1st value : <input type="text" name="text1">
+    2nd value : <input type="text" name="text2">
+    <input type="submit">
+</form>
+<h1>hey Everyone</h1>
+<h2>Nand kishore is here {{titles}}</h2>
+
+{% if user.is_authenticated %}
+<li><a href="logout/logouts"><h1>Logout</h1></a></li>
+
+{% else %}
+<li><a href="accounts/register"><h1>Register</h1></a><br></li>
+<li><a href="login/logins"><h1>Login</h1></a></li>
+
+{% endif %}
+
+</body>
+</html>
